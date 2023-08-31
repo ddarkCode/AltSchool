@@ -1,4 +1,4 @@
-const {mkdir, rmdir, rename, readdir} = require('fs');
+const {mkdir, rmdir,rm,rename, readdir} = require('fs');
 const {join} = require('path');
 
 const log = console.log
@@ -22,8 +22,26 @@ const newFolderPath = join(__dirname, 'files','newFolderToWorkWith');
 // })
 
 
-rename(newFolderPath, folderPath, () => {
+// rename(newFolderPath, folderPath, () => {
    
-    log('Folder renamed successfully.')
-})
+//     log('Folder renamed successfully.')
+// })
 
+// rmdir(folderPath,{recursive: true}, err => {
+//     if (err) {
+//         log(err);
+//         return;
+//     }
+//     log('Folder deleted successfully.')
+// })
+
+//Due to deprecation warning using rmdir to deleted non empty file is not recommended so i will use fs.rm instead
+
+
+// rm(folderPath, {recursive:true}, err => {
+//     if (err) {
+//         log(err);
+//         return;
+//     }
+//     log('Folder deleted successfully.')
+// })
