@@ -3,4 +3,5 @@
 
 // require('./fs/read') 
 
-require('./fs/write')
+// require('./fs/write')
+require('./fs/delete');
