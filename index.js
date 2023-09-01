@@ -8,4 +8,5 @@
 
 // require('./fs/folders')
 
-require('./servers/server');
+// require('./servers/server');
+require('./servers/serverMethods')
